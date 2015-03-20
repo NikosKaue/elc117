@@ -21,7 +21,32 @@ addComma [] = []
 addComma x =((head x) ++ ",") : addComma (tail x)
   
 --5) Refaça os 2 exercícios anteriores usando a função de alta ordem 'map'.
-  
+
+--3 foi feitaa ja com map
+--4)refeito c/ map
 add :: [String] -> [String]
 add [] = [] 
 add x = map (++ ",") x
+
+
+--6)
+
+
+
+
+
+
+-- FUNÇÕES DE ALTA ORDEM
+
+--1) Dada uma lista de números, calcular 2*n+1 para cada número n contido na lista.
+
+lis :: [Int] -> [Int]
+lis [] = []
+lis x = map (\x -> 2*x+1) x
+
+--2) Dadas duas listas X e Y de números inteiros, calcular 4*x+2*y+1 para cada par de números x e y pertencentes às listas. 
+
+func :: [Int] -> [Int] -> [Int]
+func [] [] = []
+func x y = zipWith (\x y -> 4*x+2*y+1) x y
+
