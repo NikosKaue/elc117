@@ -2,6 +2,43 @@
 --Nome: Nikollas Kauê Soares Gomes
 --Matrícula: 201020867
 
+-- EXECUÇÃO
+
+--1) Copie as funções abaixo para um arquivo de programa Haskell (.hs):
+
+-- Soma os quadrados de 2 numeros
+doubleUs :: Int -> Int -> Int   
+doubleUs x y = x^2 + y^2
+  
+-- Verifica se um numero eh par (mod retorna resto da divisao inteira)
+isEven :: Int -> Bool
+isEven n = if mod n 2 == 0 then True else False
+  
+-- Gera um numero a partir de um caracter
+encodeMe :: Char -> Int
+encodeMe c 
+  | c == 'S'  = 0
+  | c == 'N'  = 1
+  | otherwise = 2
+  
+-- Calcula o quadrado do primeiro elemento da lista
+doubleFirst :: [Int] -> Int
+doubleFirst lis = (head lis)^2
+
+--2) Abra um interpretador Haskell e teste as funções em cada um dos casos abaixo, observando alguns erros que podem ocorrer:
+
+--doubleUs (2+1) 6
+--doubleUs 'A' 1
+--isEven 8
+--isEven 9
+--isEven 8.1
+--encodeMe 'S'
+--encodeMe "S"
+--doubleFirst [-3,4,5]
+--doubleFirst []
+
+-- PROGRAMAÇÃO
+
 --1) Escreva uma função hasEqHeads :: [Int] -> [Int] -> Bool que verifica se as 2 listas possuem
 -- o mesmo primeiro elemento. 
 
