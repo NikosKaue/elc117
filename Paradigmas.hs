@@ -59,6 +59,9 @@ charFound x y
 
 --8) Reescreva a função anterior sem recursão, usando outras funções pré-definidas já vistas em aula.
 
+charFound2 :: Char -> String -> Bool
+charFound2 x y = if (filter(== x)y) == [] then False else True
+
 --9) Use a função de alta ordem 'zipWith' para produzir uma função que obtenha as diferenças, par 
 --a par, dos elementos de duas listas. Por exemplo: para listas de entrada [1,2,3,4] e [2,2,1,1],
 -- o resultado será [-1,0,2,3].
